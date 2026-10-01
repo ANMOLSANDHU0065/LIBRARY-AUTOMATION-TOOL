@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | LIBRARY DESK</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/auth.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <!-- LEFT -->
+
+        <div class="auth-left">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    LF
+                </div>
+
+                <div>
+                    <h3>LIBRARY DESK</h3>
+                    <span>Library Automation</span>
+                </div>
+
+            </div>
+
+            <div class="left-content">
+
+                <span class="eyebrow">
+                    ✨ JOIN LIBRARY DESK
+                </span>
+
+                <h1>
+                    Create your
+                    <span>library</span>
+                    account.
+                </h1>
+
+                <p>
+                    Register as a member and start
+                    managing your library activities
+                    with ease.
+                </p>
+
+                <div class="feature">
+
+                    <div>👤</div>
+
+                    <div>
+                        <strong>Personal Account</strong>
+                        <small>
+                            Keep your member information organized.
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div>📚</div>
+
+                    <div>
+                        <strong>Book Access</strong>
+                        <small>
+                            Track available and rented books.
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div>🔐</div>
+
+                    <div>
+                        <strong>Simple Access</strong>
+                        <small>
+                            Login easily whenever you need.
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="auth-right">
+
+            <div class="auth-card">
+
+                <div class="mobile-brand">
+
+                    <div class="brand-logo">
+                        LF
+                    </div>
+
+                    <strong>LIBRARY DESK</strong>
+
+                </div>
+
+                <div class="card-icon">
+                    👤
+                </div>
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p class="subtitle">
+                    Create your LIBRARY DESK member account.
+                </p>
+
+
+                <div
+                    id="auth-message"
+                    class="auth-message"
+                ></div>
+<!-- SANDHU -->
+
+                <form id="register-form">
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>👤</span>
+
+                            <input
+                                type="text"
+                                id="register-name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+<!-- SANDHU -->
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>✉</span>
+
+                            <input
+                                type="email"
+                                id="register-email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+<!-- SANDHU -->
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>🔒</span>
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="register-password-toggle"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+<!-- SANDHU -->
+                    <!-- CONFIRM -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>🔐</span>
+
+                            <input
+                                type="password"
+                                id="register-confirm"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+<!-- SANDHU -->
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                        id="register-button"
+                    >
+
+                        <span>
+                            Create Account
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <p class="switch-text">
+
+                    Already have an account?
+
+                    <a href="/login">
+                        Login
+                    </a>
+<!-- SANDHU -->
+                </p>
+
+                <a
+                    href="/login"
+                    class="back-home"
+                >
+                    ← Back to Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='js/auth.js') }}"
+    ></script>
+
+</body>
+<!-- SANDHU -->
+</html>

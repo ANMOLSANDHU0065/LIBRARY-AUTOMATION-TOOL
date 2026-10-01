@@ -1,0 +1,231 @@
+[
+    {
+        "id": 1,
+        "title": "Python Crash Course",
+        "author": "Eric Matthes",
+        "category": "Programming",
+        "isbn": "9780000000001",
+        "type": "Programming",
+        "price": 699,
+        "rental_price": 59,
+        "status": "Issued"
+    },
+    {
+        "id": 2,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "category": "Programming",
+        "isbn": "9780000000002",
+        "type": "Programming",
+        "price": 799,
+        "rental_price": 69,
+        "status": "Issued"
+    },
+    {
+        "id": 3,
+        "title": "The Pragmatic Programmer",
+        "author": "David Thomas",
+        "category": "Programming",
+        "isbn": "9780000000003",
+        "type": "Programming",
+        "price": 899,
+        "rental_price": 79,
+        "status": "Available"
+    },
+    {
+        "id": 4,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "category": "Self Help",
+        "isbn": "9780000000004",
+        "type": "Self Help",
+        "price": 599,
+        "rental_price": 49,
+        "status": "Rented"
+    },
+    {
+        "id": 5,
+        "title": "Deep Work",
+        "author": "Cal Newport",
+        "category": "Productivity",
+        "isbn": "9780000000005",
+        "type": "Productivity",
+        "price": 549,
+        "rental_price": 45,
+        "status": "Available"
+    },
+    {
+        "id": 6,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "category": "Fiction",
+        "isbn": "9780000000006",
+        "type": "Fiction",
+        "price": 399,
+        "rental_price": 39,
+        "status": "Sold"
+    },
+    {
+        "id": 7,
+        "title": "Ikigai",
+        "author": "Hector Garcia",
+        "category": "Lifestyle",
+        "isbn": "9780000000007",
+        "type": "Lifestyle",
+        "price": 449,
+        "rental_price": 39,
+        "status": "Issued"
+    },
+    {
+        "id": 8,
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert Kiyosaki",
+        "category": "Finance",
+        "isbn": "9780000000008",
+        "type": "Finance",
+        "price": 499,
+        "rental_price": 45,
+        "status": "Available"
+    },
+    {
+        "id": 9,
+        "title": "Think and Grow Rich",
+        "author": "Napoleon Hill",
+        "category": "Finance",
+        "isbn": "9780000000009",
+        "type": "Finance",
+        "price": 399,
+        "rental_price": 35,
+        "status": "Available"
+    },
+    {
+        "id": 10,
+        "title": "Introduction to Algorithms",
+        "author": "Cormen et al.",
+        "category": "DSA",
+        "isbn": "9780000000010",
+        "type": "DSA",
+        "price": 1299,
+        "rental_price": 99,
+        "status": "Available"
+    },
+    {
+        "id": 11,
+        "title": "Computer Networks",
+        "author": "Andrew Tanenbaum",
+        "category": "Networking",
+        "isbn": "9780000000011",
+        "type": "Networking",
+        "price": 999,
+        "rental_price": 79,
+        "status": "Issued"
+    },
+    {
+        "id": 12,
+        "title": "Database System Concepts",
+        "author": "Silberschatz",
+        "category": "DBMS",
+        "isbn": "9780000000012",
+        "type": "DBMS",
+        "price": 1099,
+        "rental_price": 89,
+        "status": "Available"
+    },
+    {
+        "id": 13,
+        "title": "Artificial Intelligence",
+        "author": "Stuart Russell",
+        "category": "AI",
+        "isbn": "9780000000013",
+        "type": "AI",
+        "price": 1199,
+        "rental_price": 99,
+        "status": "Available"
+    },
+    {
+        "id": 14,
+        "title": "Hands-On Machine Learning",
+        "author": "Aurélien Géron",
+        "category": "ML",
+        "isbn": "9780000000014",
+        "type": "ML",
+        "price": 1399,
+        "rental_price": 109,
+        "status": "Available"
+    },
+    {
+        "id": 15,
+        "title": "Eloquent JavaScript",
+        "author": "Marijn Haverbeke",
+        "category": "Web Development",
+        "isbn": "9780000000015",
+        "type": "Web Development",
+        "price": 699,
+        "rental_price": 59,
+        "status": "Available"
+    },
+    {
+        "id": 16,
+        "title": "HTML and CSS",
+        "author": "Jon Duckett",
+        "category": "Web Development",
+        "isbn": "9780000000016",
+        "type": "Web Development",
+        "price": 799,
+        "rental_price": 69,
+        "status": "Available"
+    },
+    {
+        "id": 17,
+        "title": "The Psychology of Money",
+        "author": "Morgan Housel",
+        "category": "Finance",
+        "isbn": "9780000000017",
+        "type": "Finance",
+        "price": 599,
+        "rental_price": 49,
+        "status": "Rented"
+    },
+    {
+        "id": 18,
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "category": "History",
+        "isbn": "9780000000018",
+        "type": "History",
+        "price": 699,
+        "rental_price": 59,
+        "status": "Available"
+    },
+    {
+        "id": 19,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "category": "Science",
+        "isbn": "9780000000019",
+        "type": "Science",
+        "price": 499,
+        "rental_price": 45,
+        "status": "Available"
+    },
+    {
+        "id": 20,
+        "title": "The Design of Everyday Things",
+        "author": "Don Norman",
+        "category": "Design",
+        "isbn": "9780000000020",
+        "type": "Design",
+        "price": 749,
+        "rental_price": 59,
+        "status": "Available"
+    },
+    {
+        "id": 21,
+        "title": "Test Python Book",
+        "author": "Test Author",
+        "category": "Programming",
+        "isbn": "TEST-ISBN-001",
+        "price": 0.0,
+        "status": "Available"
+    }
+]

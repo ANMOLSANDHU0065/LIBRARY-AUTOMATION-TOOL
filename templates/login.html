@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- SANDHU -->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | LIBRARY DESK</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/auth.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <!-- LEFT SIDE -->
+
+        <div class="auth-left">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    LF
+                </div>
+
+                <div>
+                    <h3>LIBRARY DESK</h3>
+                    <span>Library Automation</span>
+                </div>
+
+            </div>
+
+            <div class="left-content">
+
+                <span class="eyebrow">
+                    📚 WELCOME BACK
+                </span>
+
+                <h1>
+                    Manage your
+                    <span>library</span>
+                    effortlessly.
+                </h1>
+<!-- SANDHU -->
+                <p>
+                    Sign in to access your books,
+                    members and library transactions
+                    from one simple dashboard.
+                </p>
+
+                <div class="feature">
+
+                    <div>📚</div>
+
+                    <div>
+                        <strong>Book Management</strong>
+                        <small>
+                            Manage your library collection.
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <div>👥</div>
+
+                    <div>
+                        <strong>Member Access</strong>
+                        <small>
+                            Keep your member information organized.
+                        </small>
+                    </div>
+<!-- SANDHU -->
+                </div>
+
+                <div class="feature">
+
+                    <div>↔️</div>
+
+                    <div>
+                        <strong>Easy Transactions</strong>
+                        <small>
+                            Issue and return books easily.
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+<!-- SANDHU -->
+        <!-- RIGHT SIDE -->
+
+        <div class="auth-right">
+
+            <div class="auth-card">
+
+                <div class="mobile-brand">
+
+                    <div class="brand-logo">
+                        LF
+                    </div>
+
+                    <strong>LIBRARY DESK</strong>
+
+                </div>
+
+                <div class="card-icon">
+                    🔐
+                </div>
+
+                <h2>
+                    Member Login
+                </h2>
+
+                <p class="subtitle">
+                    Sign in to continue to your library.
+                </p>
+
+<!-- SANDHU -->
+                <div
+                    id="auth-message"
+                    class="auth-message"
+                ></div>
+
+
+                <form id="login-form">
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>✉</span>
+
+                            <input
+                                type="email"
+                                id="login-email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+<!-- SANDHU -->
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label>
+                                Password
+                            </label>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <span>🔒</span>
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="login-password-toggle"
+                            >
+                                👁
+                            </button>
+<!-- SANDHU -->
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOGIN -->
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                        id="login-button"
+                    >
+
+                        <span>
+                            Login to Dashboard
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+<!-- SANDHU -->
+                <p class="switch-text">
+
+                    New member?
+
+                    <a href="/register">
+                        Create an account
+                    </a>
+
+                </p>
+
+                <a
+                    href="/"
+                    class="back-home"
+                >
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+<!-- SANDHU -->
+
+    <script
+        src="{{ url_for('static', filename='js/auth.js') }}"
+    ></script>
+
+</body>
+
+</html>

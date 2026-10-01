@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Anmol Sandhu",
+        "email": "anmol@example.com",
+        "phone": "9876543210",
+        "membership": "Premium"
+    },
+    {
+        "id": 2,
+        "name": "Arjun Sharma",
+        "email": "arjun@example.com",
+        "phone": "9876543211",
+        "membership": "Standard"
+    },
+    {
+        "id": 3,
+        "name": "Simran Kaur",
+        "email": "simran@example.com",
+        "phone": "9876543212",
+        "membership": "Student"
+    },
+    {
+        "id": 4,
+        "name": "Rahul Verma",
+        "email": "rahul@example.com",
+        "phone": "9876543213",
+        "membership": "Standard"
+    },
+    {
+        "id": 5,
+        "name": "Priya Singh",
+        "email": "priya@example.com",
+        "phone": "9876543214",
+        "membership": "Premium"
+    },
+    {
+        "id": 6,
+        "name": "Neha Gupta",
+        "email": "neha@example.com",
+        "phone": "9876543215",
+        "membership": "Student"
+    },
+    {
+        "id": 7,
+        "name": "HONEY",
+        "email": "singhanmol0359@gmail.com",
+        "phone": "8827590965",
+        "membership": "Standard"
+    },
+    {
+        "id": 8,
+        "name": "BOBBY",
+        "email": "bobby@gmail.com",
+        "phone": "7894612354"
+    },
+    {
+        "id": 9,
+        "name": "Test Member",
+        "email": "testmember001@example.com",
+        "phone": "9876543001"
+    }
+]

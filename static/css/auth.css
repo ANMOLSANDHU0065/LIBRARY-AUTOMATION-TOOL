@@ -1,0 +1,937 @@
+/* =========================================
+   LIBRARY DESK AUTH PAGES
+   ========================================= */
+/* SANDHU */
+:root {
+
+    --lavender-blush: #FFF0F5;
+    --pink: #c45b88;
+    --pink-dark: #a94470;
+    --pink-light: #f8dce8;
+
+    --dark: #302331;
+    --dark-soft: #453446;
+
+    --text: #29202b;
+    --muted: #826f7c;
+
+    --white: #ffffff;
+
+    --border: #ead6df;
+
+    --success: #16845c;
+    --danger: #c74461;
+
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        Segoe UI,
+        Arial,
+        sans-serif;
+
+    background: var(--lavender-blush);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+/* SANDHU */
+/* =========================================
+   MAIN
+   ========================================= */
+
+.auth-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 560px);
+
+}
+
+
+/* =========================================
+   LEFT
+   ========================================= */
+
+.auth-left {
+
+    background: var(--lavender-blush);
+
+    padding: 38px 8%;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+/* SANDHU */
+/* decorative circles */
+
+.auth-left::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(196, 91, 136, 0.08);
+
+    top: -120px;
+
+    left: -100px;
+
+}
+
+.auth-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+
+    height: 380px;
+
+    border-radius: 50%;
+
+    background: rgba(196, 91, 136, 0.07);
+
+    bottom: -180px;
+
+    left: -80px;
+
+}
+
+/* SANDHU */
+/* =========================================
+   BRAND
+   ========================================= */
+
+.brand {
+
+    position: absolute;
+
+    top: 32px;
+    left: 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 2;
+
+}
+
+.brand-logo {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d77da2,
+            #a94470
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 800;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 10px 25px rgba(169, 68, 112, 0.2);
+
+}
+/* SANDHU */
+.brand h3 {
+
+    font-size: 19px;
+
+}
+
+.brand span {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+
+/* =========================================
+   LEFT CONTENT
+   ========================================= */
+
+.left-content {
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.eyebrow {
+
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 50px;
+
+    background: #f9dce8;
+
+    color: var(--pink-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+.left-content h1 {
+
+    font-size: clamp(
+        42px,
+        5vw,
+        70px
+    );
+/* SANDHU */
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    max-width: 700px;
+
+}
+
+.left-content h1 span {
+
+    color: var(--pink);
+
+}
+
+.left-content > p {
+
+    margin-top: 24px;
+
+    max-width: 570px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.feature {
+
+    margin-top: 18px;
+
+    max-width: 580px;
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(255,255,255,0.65);
+
+    border: 1px solid rgba(234,214,223,0.9);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+/* SANDHU */
+.feature:hover {
+
+    transform: translateX(6px);
+
+    box-shadow:
+        0 12px 30px rgba(100,50,80,0.08);
+
+}
+
+.feature > div:first-child {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 13px;
+
+    background: #f9dce8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+}
+
+.feature strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+/* SANDHU */
+.feature small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+}
+
+
+/* =========================================
+   RIGHT
+   ========================================= */
+
+.auth-right {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8dce8,
+            #fff7fa
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+}
+
+/* SANDHU */
+/* =========================================
+   CARD
+   ========================================= */
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 25px 70px rgba(74, 39, 59, 0.12);
+
+    animation:
+        cardIn 0.55s ease;
+
+}
+
+@keyframes cardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+/* SANDHU */
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   CARD HEADER
+   ========================================= */
+
+.card-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 17px;
+
+    background: #f7d4e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+.auth-card h2 {
+
+    font-size: 30px;
+
+    letter-spacing: -0.7px;
+
+}
+
+.subtitle {
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    line-height: 1.5;
+
+}
+
+/* SANDHU */
+/* =========================================
+   FORM
+   ========================================= */
+
+.form-group {
+
+    margin-top: 21px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+.input-box {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: #fffafd;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 14px;
+
+    gap: 10px;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+.input-box:focus-within {
+
+    border-color: var(--pink);
+
+    box-shadow:
+        0 0 0 4px rgba(196,91,136,0.1);
+
+    transform: translateY(-1px);
+
+}
+
+.input-box span {
+
+    font-size: 16px;
+
+}
+
+.input-box input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+}
+
+.input-box input::placeholder {
+
+    color: #a995a1;
+
+}
+
+.password-toggle {
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    padding: 5px;
+
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.auth-button {
+
+    width: 100%;
+
+    min-height: 53px;
+
+    margin-top: 25px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c45b88,
+            #a94470
+        );
+/* SANDHU */
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    box-shadow:
+        0 12px 25px rgba(169,68,112,0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+.auth-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 17px 30px rgba(169,68,112,0.28);
+
+}
+
+.auth-button:active {
+
+    transform: translateY(0);
+
+}
+
+.auth-button.loading {
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+}
+
+/* SANDHU */
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.auth-message {
+
+    display: none;
+
+    padding: 12px 14px;
+
+    margin-top: 20px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+}
+
+.auth-message.show {
+
+    display: block;
+
+}
+
+.auth-message.error {
+
+    color: var(--danger);
+
+    background: #fff0f3;
+
+    border: 1px solid #f2bdc8;
+
+}
+
+.auth-message.success {
+
+    color: var(--success);
+
+    background: #effbf6;
+
+    border: 1px solid #bce6d3;
+
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #ae9ba6;
+
+    font-size: 11px;
+
+}
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.switch-text {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+.switch-text a {
+
+    color: var(--pink-dark);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+/* SANDHU */
+.switch-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+.back-home {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+}
+
+.back-home:hover {
+
+    color: var(--pink-dark);
+
+}
+
+
+/* =========================================
+   MOBILE BRAND
+   ========================================= */
+
+.mobile-brand {
+
+    display: none;
+
+}
+/* SANDHU */
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .auth-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .auth-left {
+
+        min-height: 330px;
+
+        padding:
+            110px 30px 45px;
+
+    }
+
+    .brand {
+
+        left: 30px;
+
+    }
+
+    .left-content {
+
+        max-width: 700px;
+
+    }
+
+    .left-content h1 {
+
+        font-size: 48px;
+
+    }
+
+    .feature {
+
+        display: none;
+
+    }
+
+    .auth-right {
+
+        padding: 35px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-left {
+
+        min-height: 260px;
+
+        padding:
+            95px 22px 30px;
+
+    }
+
+    .brand {
+
+        top: 22px;
+
+        left: 22px;
+
+    }
+/* SANDHU */
+    .brand-logo {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+    .left-content h1 {
+
+        font-size: 38px;
+
+        letter-spacing: -1px;
+
+    }
+
+    .left-content > p {
+
+        font-size: 14px;
+
+        margin-top: 15px;
+
+    }
+
+    .eyebrow {
+
+        margin-bottom: 16px;
+
+    }
+
+    .auth-right {
+
+        padding: 20px 14px;
+
+    }
+
+    .auth-card {
+
+        padding: 28px 20px;
+
+        border-radius: 22px;
+
+    }
+
+    .auth-card h2 {
+
+        font-size: 26px;
+
+    }
+
+}
+
+/* SANDHU */
+@media (max-width: 400px) {
+
+    .left-content h1 {
+
+        font-size: 32px;
+
+    }
+
+    .auth-card {
+
+        padding: 24px 17px;
+
+    }
+
+}

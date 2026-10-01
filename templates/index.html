@@ -1,0 +1,1285 @@
+<!-- SANDHU -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LIBRARY DESK | Library Automation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- =========================
+     APP SHELL
+========================= -->
+<!-- SANDHU -->
+<div class="app-shell">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                LF
+            </div>
+
+            <div class="brand-text">
+                <h1>LIBRARY DESK</h1>
+                <span>Library Automation</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-label">
+            MAIN MENU
+        </div>
+<!-- SANDHU -->
+
+        <nav class="navigation">
+
+            <button class="nav-item active"
+                    data-section="dashboard">
+
+                <span class="nav-icon">⌂</span>
+
+                <span class="nav-text">
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-section="books">
+
+                <span class="nav-icon">▣</span>
+
+                <span class="nav-text">
+                    Books
+                </span>
+
+            </button>
+<!-- SANDHU -->
+
+            <button class="nav-item"
+                    data-section="members">
+
+                <span class="nav-icon">♙</span>
+
+                <span class="nav-text">
+                    Members
+                </span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-section="transactions">
+
+                <span class="nav-icon">↔</span>
+
+                <span class="nav-text">
+                    Transactions
+                </span>
+
+            </button>
+
+        </nav>
+<!-- SANDHU -->
+
+        <!-- Sidebar bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    AS
+                </div>
+
+                <div class="profile-info">
+                    <strong>ANMOL SANDHU</strong>
+                    <span>Library Admin</span>
+                </div>
+
+            </div>
+
+
+            <button class="sidebar-button" id="themeToggle">
+
+                <span id="themeIcon">☾</span>
+
+                <span>
+                    Dark Mode
+                </span>
+
+            </button>
+
+
+            <button class="sidebar-button logout-button"
+                    id="logoutButton">
+
+                <span>↪</span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+<!-- SANDHU -->
+
+    <!-- =========================
+         MAIN AREA
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="mobile-menu"
+                        id="mobileMenu">
+
+                    ☰
+
+                </button>
+
+                <div>
+<!-- SANDHU -->
+                    <p class="eyebrow">
+                        LIBRARY MANAGEMENT SYSTEM
+                    </p>
+
+                    <h2 id="pageTitle">
+                        Dashboard
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        System Online
+                    </span>
+
+                </div>
+
+<!-- SANDHU -->
+                <button class="header-add-button"
+                        id="headerAddButton">
+
+                    <span>＋</span>
+
+                    <span>
+                        Add Book
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+
+        <section class="page-section active"
+                 id="dashboardSection">
+
+<!-- SANDHU -->
+            <!-- Welcome -->
+
+            <div class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-tag">
+                        LIBRARY CONTROL CENTER
+                    </span>
+
+                    <h1>
+                        Manage your library
+                        <br>
+                        <span>efficiently.</span>
+                    </h1>
+
+                    <p>
+                        Manage books, members, rentals and
+                        transactions from one clean dashboard.
+                    </p>
+
+                    <div class="welcome-buttons">
+
+                        <button class="primary-button"
+                                data-open="book">
+
+                            + Add New Book
+<!-- SANDHU -->
+                        </button>
+
+                        <button class="secondary-button"
+                                data-open="member">
+
+                            + Add Member
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+<!-- SANDHU -->
+                <div class="welcome-visual">
+
+                    <div class="book-stack">
+
+                        <div class="floating-book book-one">
+                            PY
+                        </div>
+
+                        <div class="floating-book book-two">
+                            AI
+                        </div>
+
+                        <div class="floating-book book-three">
+                            WEB
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+<!-- SANDHU -->
+            <div class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <span>Total Books</span>
+                        <strong id="totalBooks">0</strong>
+                        <small>Books in library</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Available</span>
+                        <strong id="availableBooks">0</strong>
+                        <small>Ready to issue</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ↗
+                    </div>
+
+                    <div>
+                        <span>Issued / Rented</span>
+                        <strong id="issuedBooks">0</strong>
+                        <small>Currently out</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ♙
+                    </div>
+
+                    <div>
+                        <span>Members</span>
+                        <strong id="totalMembers">0</strong>
+                        <small>Registered members</small>
+                    </div>
+
+                </article>
+<!-- SANDHU -->
+            </div>
+
+
+            <!-- QUICK ACTIONS + SYSTEM -->
+
+            <div class="dashboard-grid">
+
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                SHORTCUTS
+                            </span>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                        </div>
+
+                    </div>
+<!-- SANDHU -->
+
+                    <div class="quick-grid">
+
+                        <button class="quick-card"
+                                data-open="book">
+
+                            <span class="quick-icon">
+                                ＋
+                            </span>
+
+                            <div>
+                                <strong>Add Book</strong>
+                                <small>Add a new book</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+
+                        </button>
+
+
+                        <button class="quick-card"
+                                data-open="member">
+
+                            <span class="quick-icon">
+                                ♙
+                            </span>
+<!-- SANDHU -->
+                            <div>
+                                <strong>Add Member</strong>
+                                <small>Register member</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+
+                        </button>
+
+
+                        <button class="quick-card"
+                                data-open="issue">
+
+                            <span class="quick-icon">
+                                ↗
+                            </span>
+
+                            <div>
+                                <strong>Issue Book</strong>
+                                <small>Create transaction</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+
+                        </button>
+
+<!-- SANDHU -->
+                        <button class="quick-card"
+                                data-open="return">
+
+                            <span class="quick-icon">
+                                ↙
+                            </span>
+
+                            <div>
+                                <strong>Return Book</strong>
+                                <small>Complete return</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SYSTEM STATUS -->
+
+                <div class="panel system-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+<!-- SANDHU -->
+                            <span class="section-label">
+                                STATUS
+                            </span>
+
+                            <h3>
+                                System Health
+                            </h3>
+
+                        </div>
+
+                        <span class="health-badge">
+                            Healthy
+                        </span>
+
+                    </div>
+
+
+                    <div class="system-list">
+
+                        <div>
+                            <span>Backend</span>
+                            <strong>Flask + Python</strong>
+                        </div>
+
+                        <div>
+                            <span>Storage</span>
+                            <strong>JSON</strong>
+                        </div>
+
+                        <div>
+                            <span>Validation</span>
+                            <strong>Enabled</strong>
+                        </div>
+<!-- SANDHU -->
+                        <div>
+                            <span>Responsive</span>
+                            <strong>Yes</strong>
+                        </div>
+
+                        <div>
+                            <span>Theme</span>
+                            <strong>Light / Dark</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-- SANDHU -->
+            <!-- RECENT TRANSACTIONS -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACTIVITY
+                        </span>
+
+                        <h3>
+                            Recent Transactions
+                        </h3>
+
+                    </div>
+
+                    <button class="text-button"
+                            data-section-target="transactions">
+
+                        View All →
+
+                    </button>
+
+                </div>
+<!-- SANDHU -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Transaction ID</th>
+                                <th>Book</th>
+                                <th>Member</th>
+                                <th>Date</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recentTransactions">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- SANDHU -->
+
+        <!-- =========================
+             BOOKS
+        ========================== -->
+
+        <section class="page-section"
+                 id="booksSection">
+
+
+            <div class="section-top">
+
+                <div>
+
+                    <span class="section-label">
+                        COLLECTION
+                    </span>
+
+                    <h1>
+                        Books Library
+                    </h1>
+
+                    <p>
+                        Manage, search and track all library books.
+                    </p>
+
+                </div>
+
+<!-- SANDHU -->
+                <button class="primary-button"
+                        data-open="book">
+
+                    + Add Book
+
+                </button>
+
+            </div>
+
+
+            <div class="toolbar">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input type="text"
+                           id="bookSearch"
+                           placeholder="Search by title, author, category or ISBN...">
+
+                </div>
+
+<!-- SANDHU -->
+                <select id="bookFilter">
+
+                    <option value="all">
+                        All Books
+                    </option>
+
+                    <option value="Available">
+                        Available
+                    </option>
+
+                    <option value="Issued">
+                        Issued
+                    </option>
+
+                </select>
+
+            </div>
+
+<!-- SANDHU -->
+            <div class="panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+                                <th>Book</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>ISBN</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Action</th>
+
+                            </tr>
+<!-- SANDHU -->
+                        </thead>
+
+                        <tbody id="booksTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MEMBERS
+        ========================== -->
+
+        <section class="page-section"
+                 id="membersSection">
+
+
+            <div class="section-top">
+
+                <div>
+<!-- SANDHU -->
+                    <span class="section-label">
+                        COMMUNITY
+                    </span>
+
+                    <h1>
+                        Library Members
+                    </h1>
+
+                    <p>
+                        Manage registered library members.
+                    </p>
+
+                </div>
+
+
+                <button class="primary-button"
+                        data-open="member">
+
+                    + Add Member
+
+                </button>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="member-grid"
+                     id="membersGrid">
+
+                </div>
+<!-- SANDHU -->
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRANSACTIONS
+        ========================== -->
+
+        <section class="page-section"
+                 id="transactionsSection">
+
+
+            <div class="section-top">
+
+                <div>
+
+                    <span class="section-label">
+                        CIRCULATION
+                    </span>
+
+                    <h1>
+                        Transactions
+                    </h1>
+
+                    <p>
+                        Track issue, rental and return activity.
+                    </p>
+
+                </div>
+<!-- SANDHU -->
+
+                <button class="primary-button"
+                        data-open="issue">
+
+                    + New Transaction
+
+                </button>
+
+            </div>
+
+<!-- SANDHU -->
+            <div class="transaction-summary">
+
+                <div>
+                    <span>Total Transactions</span>
+                    <strong id="transactionCount">0</strong>
+                </div>
+
+                <div>
+                    <span>Currently Issued</span>
+                    <strong id="activeTransactions">0</strong>
+                </div>
+
+                <div>
+                    <span>Returned</span>
+                    <strong id="returnedTransactions">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+<!-- SANDHU -->
+                                <th>Transaction ID</th>
+                                <th>Reference ID</th>
+                                <th>Book</th>
+                                <th>Member</th>
+                                <th>Issue Date</th>
+                                <th>Return Date</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="transactionsTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- SANDHU -->
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+       <footer class="footer">
+
+    <div class="footer-brand">
+        <strong>LIBRARY DESK</strong>
+        <span>Library Automation System</span>
+    </div>
+
+    <div class="footer-credit">
+        Designed &amp; Built with <span>♥</span> by
+        <strong>Sandhu</strong>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Library Desk. All rights reserved.
+    </div>
+
+</footer>
+    </main>
+
+</div>
+
+<!-- SANDHU -->
+<!-- =========================
+     BOOK MODAL
+========================= -->
+
+<div class="modal-overlay"
+     id="bookModal">
+
+    <div class="modal">
+
+        <button class="modal-close"
+                data-close="bookModal">
+            ×
+        </button>
+
+        <div class="modal-header">
+
+            <span class="modal-icon">
+                ▣
+            </span>
+
+            <div>
+                <span class="section-label">
+                    LIBRARY
+                </span>
+
+                <h2>
+                    Add New Book
+                </h2>
+            </div>
+
+        </div>
+
+<!-- SANDHU -->
+        <form id="bookForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Book Name
+                    </label>
+
+                    <input type="text"
+                           id="bookTitle"
+                           required
+                           placeholder="Enter book name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Author
+                    </label>
+
+                    <input type="text"
+                           id="bookAuthor"
+                           required
+                           placeholder="Author name">
+
+                </div>
+<!-- SANDHU -->
+
+                <div class="form-group">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="bookCategory"
+                            required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option>Programming</option>
+                        <option>Artificial Intelligence</option>
+                        <option>Data Science</option>
+                        <option>Web Development</option>
+                        <option>Database</option>
+                        <option>Networking</option>
+                        <option>Cloud Computing</option>
+                        <option>Cyber Security</option>
+                        <option>Business</option>
+                        <option>Mathematics</option>
+
+                    </select>
+
+                </div>
+<!-- SANDHU -->
+
+                <div class="form-group">
+
+                    <label>
+                        ISBN
+                    </label>
+
+                    <input type="text"
+                           id="bookISBN"
+                           required
+                           placeholder="ISBN number">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close="bookModal">
+
+                    Cancel
+
+                </button>
+<!-- SANDHU -->
+                <button type="submit"
+                        class="primary-button">
+
+                    Save Book
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MEMBER MODAL
+========================= -->
+
+<div class="modal-overlay"
+     id="memberModal">
+
+    <div class="modal">
+
+        <button class="modal-close"
+                data-close="memberModal">
+            ×
+        </button>
+<!-- SANDHU -->
+        <div class="modal-header">
+
+            <span class="modal-icon">
+                ♙
+            </span>
+
+            <div>
+                <span class="section-label">
+                    MEMBERS
+                </span>
+
+                <h2>
+                    Register Member
+                </h2>
+            </div>
+
+        </div>
+
+
+        <form id="memberForm">
+
+            <div class="form-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="memberName"
+                       required
+                       placeholder="Enter member name">
+
+            </div>
+
+<!-- SANDHU -->
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="memberEmail"
+                           required
+                           placeholder="example@gmail.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone
+                    </label>
+
+                    <input type="tel"
+                           id="memberPhone"
+                           maxlength="10"
+                           required
+                           placeholder="10 digit number">
+
+                </div>
+<!-- SANDHU -->
+            </div>
+
+
+            <div class="form-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close="memberModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Register Member
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- SANDHU -->
+<!-- =========================
+     ISSUE MODAL
+========================= -->
+
+<div class="modal-overlay"
+     id="issueModal">
+
+    <div class="modal">
+
+        <button class="modal-close"
+                data-close="issueModal">
+            ×
+        </button>
+
+        <div class="modal-header">
+
+            <span class="modal-icon">
+                ↗
+            </span>
+
+            <div>
+                <span class="section-label">
+                    CIRCULATION
+                </span>
+<!-- SANDHU -->
+                <h2>
+                    Issue / Rent Book
+                </h2>
+            </div>
+
+        </div>
+
+
+        <form id="issueForm">
+
+            <div class="form-group">
+
+                <label>
+                    Select Book
+                </label>
+
+                <select id="issueBook"
+                        required>
+
+                </select>
+
+            </div>
+<!-- SANDHU -->
+
+            <div class="form-group">
+
+                <label>
+                    Select Member
+                </label>
+
+                <select id="issueMember"
+                        required>
+
+                </select>
+
+            </div>
+
+
+            <div class="reference-box">
+
+                <span>
+                    Reference ID
+                </span>
+
+                <strong id="referencePreview">
+                    Will be generated automatically
+                </strong>
+
+            </div>
+<!-- SANDHU -->
+
+            <div class="form-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close="issueModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Issue Book
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- SANDHU -->
+
+<!-- =========================
+     RETURN MODAL
+========================= -->
+
+<div class="modal-overlay"
+     id="returnModal">
+
+    <div class="modal">
+
+        <button class="modal-close"
+                data-close="returnModal">
+            ×
+        </button>
+
+        <div class="modal-header">
+
+            <span class="modal-icon">
+                ↙
+            </span>
+<!-- SANDHU -->
+            <div>
+                <span class="section-label">
+                    RETURN
+                </span>
+
+                <h2>
+                    Return Book
+                </h2>
+            </div>
+
+        </div>
+
+
+        <form id="returnForm">
+
+            <div class="form-group">
+
+                <label>
+                    Issued Book
+                </label>
+
+                <select id="returnBook"
+                        required>
+
+                </select>
+
+            </div>
+
+<!-- SANDHU -->
+            <div class="form-actions">
+
+                <button type="button"
+                        class="secondary-button"
+                        data-close="returnModal">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-button">
+
+                    Complete Return
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- SANDHU -->
+
+<!-- TOAST -->
+
+<div class="toast"
+     id="toast">
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <div>
+
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <p id="toastMessage">
+            Operation completed.
+        </p>
+
+    </div>
+
+</div>
+<!-- SANDHU -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

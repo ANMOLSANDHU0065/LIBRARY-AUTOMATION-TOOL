@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Admin User",
+        "email": "admin@libraflow.com",
+        "password": "pbkdf2:sha256:600000$demo$demo",
+        "role": "Admin"
+    }
+]
