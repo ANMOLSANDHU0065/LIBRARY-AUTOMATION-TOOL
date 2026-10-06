@@ -6,6 +6,11 @@ The project helps manage books, library members, and book transactions through a
 
 ---
 
+## 🚀 Live Demo
+[Visit Library Desk – Live Demo](https://library-desk.onrender.com)
+
+
+
 ## 🎯 Project Overview
 
 LIBRARY DESK is a practical Python development project created as part of a virtual internship.
